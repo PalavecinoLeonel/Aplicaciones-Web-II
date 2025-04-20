@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "nombre": "Guitarra Fender Stratocaster",
+      "descripcion": "Guitarra eléctrica con cuerpo de aliso y mástil de arce.",
+      "precio": 1500.50,
+      "imagen": "fender-strat.jpg",
+      "disponible": true
+    },
+    {
+      "id": 2,
+      "nombre": "Amplificador Marshall MG30",
+      "descripcion": "Amplificador de 30W ideal para ensayos.",
+      "precio": 800.00,
+      "imagen": "marshall-mg30.jpg",
+      "disponible": true
+    },
+    {
+      "id": 3,
+      "nombre": "Cable Jack 3 metros",
+      "descripcion": "Cable de instrumento con conectores de 1/4 pulgada.",
+      "precio": 20.99,
+      "imagen": "cable-jack.jpg",
+      "disponible": false
+    }
+  ]
