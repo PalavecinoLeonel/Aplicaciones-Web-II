@@ -3,58 +3,64 @@ import { leerJSON, escribirJSON } from '../utils/fileManager.js';
 import { join } from 'path';
 
 const router = express.Router();
-const filePath = join('data', 'usuarios.json');
+const filePath = join(process.cwd(), 'data', 'usuarios.json');
 
-router.get('/', (req, res) => {
-  res.json(readData(filePath));
+// GET - listar todos los usuarios
+router.get('/', async (req, res) => {
+  const usuarios = await leerJSON(filePath);
+  res.json(usuarios);
 });
 
-router.get('/:id', (req, res) => {
-  const data = readData(filePath);
-  const item = data.find(u => u.id == req.params.id);
-  item ? res.json(item) : res.status(404).json({ error: 'Usuario no encontrado' });
+// GET - usuario por ID
+router.get('/:id', async (req, res) => {
+  const usuarios = await leerJSON(filePath);
+  const usuario = usuarios.find(u => u.id == req.params.id);
+  usuario ? res.json(usuario) : res.status(404).json({ error: 'Usuario no encontrado' });
 });
 
-router.post('/', (req, res) => {
-  const data = readData(filePath);
-  const nuevo = { id: Date.now(), ...req.body };
-  data.push(nuevo);
-  writeData(filePath, data);
-  res.status(201).json(nuevo);
+// POST - agregar usuario
+router.post('/', async (req, res) => {
+  const usuarios = await leerJSON(filePath);
+  const nuevoUsuario = { id: Date.now(), ...req.body };
+  usuarios.push(nuevoUsuario);
+  await escribirJSON(filePath, usuarios);
+  res.status(201).json(nuevoUsuario);
 });
 
-router.post('/login', (req, res) => {
-  const { email, contraseña } = req.body;
-  const data = readData(filePath);
-  const usuario = data.find(u => u.email === email && u.contraseña === contraseña);
-  usuario ? res.json({ mensaje: 'Login correcto', usuario }) : res.status(401).json({ error: 'Credenciales inválidas' });
-});
-
-router.put('/:id', (req, res) => {
-  const data = readData(filePath);
-  const index = data.findIndex(u => u.id == req.params.id);
+// PUT - actualizar usuario
+router.put('/:id', async (req, res) => {
+  const usuarios = await leerJSON(filePath);
+  const index = usuarios.findIndex(u => u.id == req.params.id);
   if (index !== -1) {
-    data[index] = { ...data[index], ...req.body };
-    writeData(filePath, data);
-    res.json(data[index]);
+    usuarios[index] = { ...usuarios[index], ...req.body };
+    await escribirJSON(filePath, usuarios);
+    res.json(usuarios[index]);
   } else {
     res.status(404).json({ error: 'Usuario no encontrado' });
   }
 });
 
-router.delete('/:id', (req, res) => {
-  const usuarios = readData(filePath);
-  const ventas = readData(join('data', 'ventas.json'));
-  const userVentas = ventas.find(v => v.id_usuario == req.params.id);
-  if (userVentas) {
-    return res.status(400).json({ error: 'No se puede eliminar un usuario con ventas asociadas' });
-  }
-  const nuevos = usuarios.filter(u => u.id != req.params.id);
-  if (usuarios.length === nuevos.length) {
+// DELETE - eliminar usuario
+router.delete('/:id', async (req, res) => {
+  const usuarios = await leerJSON(filePath);
+  const ventas = await leerJSON(join(process.cwd(), 'data', 'ventas.json'));
+
+  const usuarioId = Number(req.params.id);
+  const index = usuarios.findIndex(u => u.id === usuarioId);
+
+  if (index === -1) {
     return res.status(404).json({ error: 'Usuario no encontrado' });
   }
-  writeData(filePath, nuevos);
-  res.json({ mensaje: 'Usuario eliminado correctamente' });
+
+  // Filtrar ventas asociadas al usuario
+  const ventasActualizadas = ventas.filter(v => v.usuarioId !== usuarioId);
+  await escribirJSON(join(process.cwd(), 'data', 'ventas.json'), ventasActualizadas);
+
+  // Eliminar usuario
+  const eliminado = usuarios.splice(index, 1)[0];
+  await escribirJSON(filePath, usuarios);
+
+  res.json({ mensaje: 'Usuario eliminado junto con sus ventas asociadas', eliminado });
 });
 
 export default router;
