@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="../Css/styles.css">
+</head>
+<body class="pagina-detalle">
+    <div class="detalle-container">
+        <div class="detalle-producto">
+            <h1 id="nombreProducto"></h1>
+            <div class="media">
+                <img id="imagenProducto" alt="Imagen del producto">
+                <div class="portaVideo">
+                    <video id="videoProducto" controls width="300">
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+            <p id="descripcionProducto"></p>
+            <p><strong>Precio:</strong> $<span id="precioProducto"></span></p>
+            <h3>Productos Relacionados</h3>
+            <div id="productosRelacionados" class="relacionados-container"></div>
+            <button class="detalle-producto-relacionado" onclick="history.back()">Volver</button>
+        </div>
+    </div>
+    <script src="detalle.js"></script>
+</body>
+</html>

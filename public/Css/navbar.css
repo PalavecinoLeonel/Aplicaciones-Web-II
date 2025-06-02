@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #2C3638;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar ul li {
+    margin-right: 20px;
+}
+.navbar ul li a, .navbar ul li button {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.navbar ul li button:hover {
+    text-decoration: underline;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    border-radius: 50%;
+}
+.nombre-tienda {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: top;
+    margin-left: 10px;
+}

@@ -5,6 +5,7 @@ import ventasRoutes from './routes/ventas.js';
 
 const app = express();
 app.use(express.json());
+app.use(express.static('public'));
 
 // Rutas
 app.use('/api/productos', productosRoutes);

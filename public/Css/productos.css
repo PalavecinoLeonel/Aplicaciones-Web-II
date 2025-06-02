@@ -1,0 +1,151 @@
+body.pagina-productos {
+    font-family: Arial, sans-serif;
+    background-image: url('../imagenes/fondoNaranja2.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------- Desde la imagen hasta ver detalles--------------*/
+.producto { 
+    width: 240px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.producto:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    transform: scale(1.05);
+}
+
+/*---------- Desde el titulo hasta ver detalles --------------*/
+.info-producto {
+    flex-grow: 1; /* OCUPA TODO EL ESPACIO DISPONIBLE*/
+    display: flex;
+    flex-direction: column; /* ELEMENTOS EN COLUMNA*/
+    justify-content: space-between;
+}
+.info-producto button {
+    display: block;
+    margin: 0px auto;
+    padding: 5px 10px;
+    background-color: #DF9328;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.info-producto button:hover {
+    background-color: #E58514;
+}
+
+
+
+
+
+/*---------- Imagen --------------*/
+.producto img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/*---------- Descripcion --------------*/
+.descripcion-producto {
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+/*---------- Ver detalles --------------*/
+
+/*---------- Precio --------------*/
+.precio-producto {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 10px;
+}
+.titulo-pagina {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 0px;
+    color: white;
+    padding-top: 0px;
+    position: relative;
+    top: 10px; 
+    background-color: inherit;
+    z-index: 5;
+}
+/*---------- Incrementar decrementar --------------*/
+.cant {
+    display: flex;
+    align-items: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/*
+.decrease {
+    
+}
+.quantity{
+    
+}
+.increase{
+    
+}
+*/
+/*---------- Agregar al carrito --------------*/
+.add-to-cart {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+
+@media (max-width: 600px) {
+    .guitarra {
+        width: 150px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .guitarra {
+        width: 250px;
+        height: 300px;
+    }
+}

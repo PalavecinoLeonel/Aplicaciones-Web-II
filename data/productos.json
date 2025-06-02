@@ -1,26 +1,130 @@
-[
-    {
-      "id": 1,
-      "nombre": "Guitarra Fender Stratocaster",
-      "descripcion": "Guitarra eléctrica con cuerpo de aliso y mástil de arce.",
-      "precio": 1500.50,
-      "imagen": "fender-strat.jpg",
-      "disponible": true
-    },
-    {
-      "id": 2,
-      "nombre": "Amplificador Marshall MG30",
-      "descripcion": "Amplificador de 30W ideal para ensayos.",
-      "precio": 800.00,
-      "imagen": "marshall-mg30.jpg",
-      "disponible": true
-    },
-    {
-      "id": 3,
-      "nombre": "Cable Jack 3 metros",
-      "descripcion": "Cable de instrumento con conectores de 1/4 pulgada.",
-      "precio": 20.99,
-      "imagen": "cable-jack.jpg",
-      "disponible": false
-    }
-  ]
+{
+  "categorias": {
+    "guitarras": [
+      {
+        "id": 1,
+        "nombre": "Guitarra Acústica",
+        "precio": 500000,
+        "descripcion": "Una guitarra acústica con pastillas, lo que permite amplificarla y obtener una...",
+        "descripcionDetalles": "Una guitarra acústica con pastillas, lo que permite amplificarla y obtener una amplia gama de sonidos. Perfecta para músicos de todos los niveles, esta guitarra acústica combina diseño clásico y un sonido cálido y resonante. Su construcción en madera de calidad asegura durabilidad y un tono excepcional. Ideal para practicar, componer o interpretar.",
+        "imagen": "../imagenes/guitarra1.webp",
+        "video": "../Videos/acustica.mp4",
+        "relatedProducts": [2, 5, 9]
+      },
+      {
+        "id": 2,
+        "nombre": "Guitarra Les Paul",
+        "precio": 550000,
+        "descripcion": "Una guitarra eléctrica sólida, famosa por su sonido grueso y sustain prolong...",
+        "descripcionDetalles": "Una guitarra eléctrica sólida, famosa por su sonido grueso y sustain prolongado. Un clásico indiscutible en el mundo de la música. Esta guitarra Les Paul ofrece un sonido poderoso y versátil gracias a sus pastillas humbucker, perfecto para rock, blues y otros géneros. Su construcción sólida y diseño icónico brindan comodidad y sustain excepcional, ideal para guitarristas que buscan estilo y rendimiento en cada nota.",
+        "imagen": "../imagenes/guitarra2.webp",
+        "video": "../Videos/LesPaul.mp4",
+        "relatedProducts": [3, 6, 10] 
+      },
+      {
+        "id": 3,
+        "nombre": "Guitarra Stratocaster",
+        "precio": 450000,
+        "descripcion": "Una guitarra eléctrica de cuerpo sólido, reconocida por su sonido brillante y versá...",
+        "descripcionDetalles": "Una guitarra eléctrica de cuerpo sólido, reconocida por su sonido brillante y versátil. Reconocida mundialmente por su diseño elegante y sonido brillante, la Stratocaster es la elección favorita de guitarristas de todos los niveles. Equipada con tres pastillas single-coil, ofrece una amplia gama de tonos, desde limpios cristalinos hasta distorsiones cálidas. Su comodidad, versatilidad y estética la convierten en un ícono en géneros como rock, blues, funk y más.",
+        "imagen": "../imagenes/guitarra3.webp",
+        "video": "../Videos/Stratocaster.mp4",
+        "relatedProducts": [8, 4, 11]
+      },
+      {
+        "id": 4,
+        "nombre": "Guitarra Flying V",
+        "precio": 750000,
+        "descripcion": "Una guitarra conocida por su sonido potente y agresivo, y popular entre los aman...",
+        "descripcionDetalles": "Una guitarra conocida por su sonido potente y agresivo, y popular entre los amantes del rock y el heavy metal. Un diseño icónico y audaz que redefine la estética del rock y el metal. La Flying V ofrece un sonido potente y definido, ideal para solos rápidos y riffs agresivos. Su construcción liviana y cuerpo en forma de 'V' proporcionan comodidad al tocar de pie, mientras que sus pastillas de alta ganancia garantizan una experiencia sonora impactante en cualquier escenario. Perfecta para quienes buscan estilo y potencia en un solo instrumento.",
+        "imagen": "../imagenes/guitarra4.webp",
+        "video": "../Videos/FlyingV.mp4",
+        "relatedProducts": [7, 1, 12]
+      }
+    ],
+    "amplificadores": [
+      {
+        "id": 5,
+        "nombre": "Amplificador Ross",
+        "precio": 300000,
+        "descripcion": "Con 10 watts de potencia y un canal limpio y otro con distorsión...",
+        "descripcionDetalles": "Con 10 watts de potencia y un canal limpio y otro con distorsión. Un amplificador versátil y compacto diseñado para músicos que buscan calidad y portabilidad. Con una potencia sólida y controles intuitivos, el Ross ofrece tonos cálidos y definidos, perfectos para practicar en casa o tocar en pequeños escenarios. Su diseño robusto y confiable lo convierte en una excelente opción tanto para principiantes como para guitarristas experimentados. Ideal para acompañar cualquier estilo musical con claridad y potencia.",
+        "imagen": "../imagenes/amplificador1.webp",
+        "video": "../Videos/AmplificadorRoss.mp4",
+        "relatedProducts": [6, 9, 1]
+      },
+      {
+        "id": 6,
+        "nombre": "Amplificador Marshall",
+        "precio": 400000,
+        "descripcion": "Para guitarristas que buscan un poco más de potencia, con 25 watts y...",
+        "descripcionDetalles": "Para guitarristas que buscan un poco más de potencia, con 25 watts y un sonido más rockero. Reconocido mundialmente por su calidad y potencia, el Marshall es un amplificador icónico que ha definido el sonido del rock. Con su diseño robusto y característico logo, ofrece un rango tonal impresionante, desde limpios brillantes hasta distorsiones potentes y agresivas. Perfecto para ensayos, presentaciones en vivo y estudio, su legendario sonido lo convierte en la elección favorita de músicos de todos los niveles. Una pieza esencial para quienes buscan potencia, precisión y el clásico sonido Marshall.",
+        "imagen": "../imagenes/amplificador2.webp",
+        "video": "../Videos/AmplificadorMarshall.mp4",
+        "relatedProducts": [7, 10, 2]
+      },
+      {
+        "id": 7,
+        "nombre": "Amplificador Fender",
+        "precio": 350000,
+        "descripcion": "Reconocidos por su sonido limpio y brillante...",
+        "descripcionDetalles": "Reconocidos por su sonido limpio y brillante. Con un sonido cálido, cristalino y lleno de carácter, el amplificador Fender es sinónimo de versatilidad y calidad. Ideal tanto para tonos limpios y brillantes como para overdrives suaves, este amplificador destaca en géneros como blues, jazz, rock y country. Su diseño clásico y construcción robusta lo convierten en una herramienta confiable tanto para músicos principiantes como para profesionales. Perfecto para estudio, escenario o práctica, el Fender es una pieza fundamental para quienes buscan un tono auténtico y legendario.",
+        "imagen": "../imagenes/amplificador3.webp",
+        "video": "../Videos/AmplificadorFender.mp4",
+        "relatedProducts": [3, 11, 8]
+      },
+      {
+        "id": 8,
+        "nombre": "Amplificador Boss",
+        "precio": 300000,
+        "descripcion": "Es compacto y ligero, lo que lo hace fácil de transportar y almacena...",
+        "descripcionDetalles": "Es compacto y ligero, lo que lo hace fácil de transportar y almacenar. Diseñado para músicos modernos, el amplificador Boss combina potencia, versatilidad y tecnología avanzada. Con múltiples efectos integrados y modelos de amplificación, ofrece una amplia gama de sonidos, desde limpios brillantes hasta distorsiones agresivas. Su diseño compacto y duradero lo hace perfecto para músicos en movimiento, ya sea para prácticas, grabaciones o presentaciones en vivo. Este amplificador es la elección ideal para quienes buscan innovación y calidad en un solo equipo.",
+        "imagen": "../imagenes/amplificador4.webp",
+        "video": "../Videos/AmplificadorBoss.mp4",
+        "relatedProducts": [12, 4, 5]
+      }
+    ],
+    "accesorios": [
+      {
+        "id": 9,
+        "nombre": "Afinador clip",
+        "precio": 30000,
+        "descripcion": "Capta el sonido que produces con tu instrumento a través de...",
+        "descripcionDetalles": "Capta el sonido que produces con tu instrumento a través de un micrófono o sensor y muestra el resultado. Compacto, preciso y fácil de usar, el afinador clip es una herramienta esencial para cualquier músico. Su diseño permite sujetarlo directamente al clavijero de tu instrumento, detectando la vibración para ofrecer una afinación exacta incluso en entornos ruidosos. Compatible con guitarras, bajos, ukeleles y otros instrumentos de cuerda, cuenta con una pantalla LED clara y modos ajustables para distintas afinaciones. Ideal para músicos principiantes y profesionales que buscan practicidad y confiabilidad en un afinador portátil.",
+        "imagen": "../imagenes/accesorio1.webp",
+        "video": "../Videos/AfinadorClip.mp4",
+        "relatedProducts": [1, 5, 2]
+      },
+      {
+        "id": 10,
+        "nombre": "Capotraste",
+        "precio": 10000,
+        "descripcion": "Se coloca en el mástil de un instrumento para acortar la lon...",
+        "descripcionDetalles": "Se coloca en el mástil de un instrumento para acortar la longitud vibrante de las cuerdas. El capotraste es un accesorio indispensable para los guitarristas que desean modificar la tonalidad de su guitarra sin cambiar la posición de los dedos. Al colocarlo en el mástil, acorta la longitud de las cuerdas, permitiendo tocar en diferentes tonalidades con los mismos acordes. Ideal para músicos que buscan variar su repertorio o experimentar con nuevas sonoridades, el capotraste es fácil de usar y ajustable para adaptarse a distintos tamaños de mástil. Ligero y duradero, es perfecto tanto para principiantes como para guitarristas avanzados.",
+        "imagen": "../imagenes/accesorio2.webp",
+        "video": "../Videos/Capotraste.mp4",
+        "relatedProducts": [3, 4, 8]
+      },
+      {
+        "id": 11,
+        "nombre": "Par de púas",
+        "precio": 3000,
+        "descripcion": "Ofrecen un sonido más brillante y definido...",
+        "descripcionDetalles": "Ofrecen un sonido más brillante y definido. Este par de púas es esencial para los guitarristas que buscan un sonido más brillante y definido. Hechas de materiales resistentes, ofrecen una excelente durabilidad y flexibilidad para un toque cómodo y preciso. Son ideales para tocar estilos como rock, pop o blues, y vienen en un tamaño perfecto para un agarre seguro y un control óptimo sobre las cuerdas. Con un diseño ergonómico, las púas permiten una ejecución más ágil y eficiente, convirtiéndose en un accesorio imprescindible para guitarristas de todos los niveles.",
+        "imagen": "../imagenes/accesorio3.webp",
+        "video": "../Videos/Puas.mp4",
+        "relatedProducts": [2, 6, 10]
+      },
+      {
+        "id": 12,
+        "nombre": "Cuerdas Ernie Ball",
+        "precio": 11000,
+        "descripcion": "Cuerdas con un tacto suave y flexible, lo que facilita la eje...",
+        "descripcionDetalles": "Cuerdas con un tacto suave y flexible, lo que facilita la ejecución y proporciona una sensación de comodidad al tocar. Las cuerdas Ernie Ball son reconocidas mundialmente por su calidad y rendimiento excepcionales. Fabricadas con materiales de alta calidad, ofrecen un tacto suave y flexible que facilita la ejecución, permitiendo una sensación de comodidad al tocar. Son ideales tanto para guitarristas principiantes como para profesionales, proporcionando un sonido claro y definido en todas las notas. Su durabilidad es sobresaliente, manteniendo su afinación durante largas sesiones de práctica o conciertos. Las cuerdas Ernie Ball son perfectas para una amplia gama de géneros musicales, desde rock hasta música clásica, asegurando una excelente respuesta y resonancia.",
+        "imagen": "../imagenes/accesorio4.webp",
+        "video": "../Videos/ErnieBall.mp4",
+        "relatedProducts": [2, 7, 9]
+      }
+    ]
+  }
+}

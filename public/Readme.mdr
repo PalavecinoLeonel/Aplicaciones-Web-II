@@ -1,0 +1,14 @@
+Nombre: Leonel
+Apellido: Palavecino
+
+
+profe:
+Ya que es una tienda de instrumentos estaria bueno que en los productos como guitarras y amplis puedas meterle una pagina de detalle
+ a cada producto con una mejor descripción y algun video (no hace falta que sea exacto en este punto) de ese equipo funcionando. 
+ Tambien a esa pagina de detalle le podes agregar productos relacionados no necesariamente de la misma categoria.
+
+Por ejemplo, si veo una guitarra, los productos recomendados pueden ser puas, amplis, estuches, lineas, etc. 
+Todo lo que complementa a ese instrumento, porque si me quiero comprar una guitarra es probable que tambien me interese el resto.
+
+A nivel estructural podes agregarle una key que sea un array de ids de los productos relacionados con cada uno en el JSON que tenes. 
+No es muy dificial de lograr pero el desafio estaria en la pagina de detalle que lo podes manejar con el localstorage.

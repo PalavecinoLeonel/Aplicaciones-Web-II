@@ -1,0 +1,56 @@
+body.pagina-inicio {
+    font-family: Arial, sans-serif;
+    background-image: url('../imagenes/fondoNaranja2.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.categorias {
+    padding: 0px;
+    margin-top: 0px;
+}
+.categoria {
+    background-color: #FFF5E8;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.categorias h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 35px;
+}
+.categoria a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.categoria a h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.categoria a p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+.categoria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,14 @@
+/*Componentes*/
+@import url('navbar.css');
+@import url('tarjetas.css');
+@import url('logoPrincipal.css');
+/*Páginas*/
+@import url('login.css');
+@import url('registro.css');
+@import url('inicio.css');
+@import url('productos.css');
+@import url('detalle.css');
+@import url('carrito.css');
+
+
+
