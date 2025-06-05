@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    fetch('../productos.json')
+    fetch('/api/productos')
         .then(response => response.json())
         .then(productosData => {
             let productoSeleccionado = null;
@@ -62,3 +62,5 @@ function verDetalle(id) {
     localStorage.setItem('productoSeleccionado', id);
     window.location.href = 'detalle.html';
 }
+
+window.verDetalle = verDetalle;

@@ -1,6 +1,7 @@
 import express from 'express';
 import { leerJSON, escribirJSON } from '../utils/fileManager.js';
 
+
 const router = express.Router();
 
 const productosArchivo = 'productos.json';

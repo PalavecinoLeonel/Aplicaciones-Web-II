@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            //const productos = data.categorias[categoria];
-            const productos = data.filter(p => p.categoria === categoria);
+            console.log('Data del backend:', data);
+            const productos = data.categorias[categoria];
+            //const productos = data.filter(p => p.categoria === categoria);
             const galeriaProductos = document.querySelector(".galeria-productos");
 
             if (!galeriaProductos) {
