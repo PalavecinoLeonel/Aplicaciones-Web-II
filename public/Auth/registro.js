@@ -43,9 +43,42 @@ document.addEventListener("DOMContentLoaded", () => {
             isValid = false;
         }
 
-        // SI TODO ESTA BIEN, VA AL LOGIN
+        // SI TODO ESTA BIEN, REGISTRA EL USUARIO Y VA AL LOGIN
         if (isValid) {
-            window.location.href = "../index.html";
+            const password = document.getElementById("password").value.trim();
+            const fechaNacimiento = document.getElementById("dob").value;
+
+            const nuevoUsuario = {
+                nombre,
+                apellido,
+                email,
+                password,
+                fechaNacimiento
+            };
+            
+            fetch("/api/usuarios", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(nuevoUsuario)
+            })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("Error en el registro");
+                }
+                return res.json();
+            })
+            
+            .then(data => {
+                console.log("Usuario registrado:", data);
+                window.location.href = "../index.html";
+            })
+            .catch(error => {
+                console.error("Hubo un problema con el registro:", error);
+                alert("Error al registrar el usuario.");
+            });
+            //window.location.href = "../index.html";
         } else {
             console.log("Errores en el formulario. No se puede registrar.");
         }

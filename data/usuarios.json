@@ -1,18 +1,3 @@
 [
-    {
-        "id": 1,
-        "nombre": "Lucía",
-        "apellido": "Gonzalez",
-        "email": "lucia.gonzalez@gmail.com",
-        "contraseña": "lucia123",
-        "activo": true
-      },
-      {
-        "id": 2,
-        "nombre": "Marcos",
-        "apellido": "Pérez",
-        "email": "marcos.perez@hotmail.com",
-        "contraseña": "marcos456",
-        "activo": false
-      }
+
 ]
