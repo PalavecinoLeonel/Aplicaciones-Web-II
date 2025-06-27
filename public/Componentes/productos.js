@@ -1,5 +1,11 @@
 // MOSTRAR PRODUCTO Y CONTROL DE ERRORES
 document.addEventListener("DOMContentLoaded", function() {
+    const galeriaProductos = document.querySelector(".galeria-productos");
+
+    if (!galeriaProductos) {
+        return;
+    }
+    
     const categoria = document.body.getAttribute("data-categoria");
 
     if (!categoria) {
@@ -14,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            console.log('Data del backend:', data);
+            
             const productos = data.categorias[categoria];
             //const productos = data.filter(p => p.categoria === categoria);
             const galeriaProductos = document.querySelector(".galeria-productos");

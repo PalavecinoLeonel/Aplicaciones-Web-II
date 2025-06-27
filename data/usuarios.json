@@ -1,3 +1,11 @@
 [
-
+  {
+    "id": 1750983507446,
+    "nombre": "Leonel",
+    "apellido": "Palavecino",
+    "email": "fake@gmail.com",
+    "contraseña": "$2b$10$AAlFWM9SafxfxLuySXYltevIiHVwzdcRna0JPkqC0jsQqnptpKy12",
+    "fechaNacimiento": "1997-07-02",
+    "activo": true
+  }
 ]

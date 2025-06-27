@@ -52,7 +52,7 @@ router.post('/', async (req, res) => {
   res.status(201).json({ mensaje: 'Usuario registrado con éxito' });
 });
 
-router.post('/api/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -80,18 +80,6 @@ router.post('/api/login', async (req, res) => {
   const { contraseña, ...usuarioSinContraseña } = usuario;
   res.json(usuarioSinContraseña);
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 router.post('/', async (req, res) => {

@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const registerForm = document.getElementById("registerForm");
 
+    if (!registerForm) return;
+
     // VALIDACIONES
     registerForm.addEventListener("submit", function (event) {
         event.preventDefault();

@@ -13,7 +13,7 @@ if (loginForm) {
 
             // Buscamos al usuario por email
             const usuario = usuarios.find(u => u.email === email);
-
+            
             if (!usuario) {
                 alert('Usuario no encontrado.');
                 return;
@@ -49,24 +49,7 @@ if (loginForm) {
         }
     });
 }
-/*
-if (loginForm) {
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
 
-        // GUARDO LA INFO DEL USUARIO LOGUEADO (el sessionStorage) 
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        
-        const user = {
-            email: email,
-            password: password
-        };
-        sessionStorage.setItem("usuarioLogueado", JSON.stringify(user));
-        window.location.href = 'Auth/inicio.html';
-    });
-}
-*/
 //REDIRIGE DEL LOGIN A LA PAG REGISTRO
 document.addEventListener("DOMContentLoaded", () => {
     const registerButton = document.getElementById("registerButton");
